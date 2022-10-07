@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hiển thị số điểm trung bình</title>
+</head>
+<body>
+<script>
+   let inputPhysics ;
+   let inputChemictry ;
+   let inputbiology ;
+   inputPhysics = prompt('nhap biến vật lí');
+   inputChemictry = prompt('nhap biến hóa');
+   inputbiology = prompt('nhap biến sinh');
+   let Physics = parseInt(inputPhysics);
+   let Chemictry = parseInt(inputChemictry);
+   let biology  = parseInt(inputbiology);
+   let average = (Physics + Chemictry + biology)/3;
+   let cal = (Physics + Chemictry + biology);
+   document.write('average' + average);
+   document.write('cal' + cal);
+
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài tập 2</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th> Amount</th>
+        <th> From Currency</th>
+        <th>To Currency</th>
+    </tr>
+    <tr>
+
+        <th><input type="text" id="dauvao"></th>
+
+<th><select name="" id="select1">
+    <option value="a">VND</option>
+    <option value="b">USD</option>
+</select></th>
+
+<th><select name="" id="select2">
+    <option value="a">VND</option>
+    <option value="b">USD</option>
+</select></th>
+<td><button onclick="baitap()">Convert</button></td>
+    </tr>
+</table>
+<p id="ketQua"></p>
+<script>
+    function baitap (){
+        let giatrivao = document.getElementById('dauvao').value;
+        let select1 = document.getElementById('select1').value;
+        let select2 = document.getElementById('select2').value;
+
+
+        if (select1 == 'a' && select2 =='b'){
+            // alert(giatrivao/20000);
+            document.getElementById('ketQua').innerHTML = "ket qua la: " + giatrivao/20000;
+        }
+        if (select1 == 'b' && select2 == 'a'){
+            // alert(giatrivao*20000);
+            document.getElementById("ketQua").innerHTML = "ket qua la: " + giatrivao*20000;
+        }
+    }
+
+
+
+    
+
+    
+</script>
+
+
+
+
+
+</body>
+</html>
