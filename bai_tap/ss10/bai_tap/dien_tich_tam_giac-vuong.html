@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dien_tich_tam_giac_vuong</title>
+</head>
+<body>
+<h2> diện tích tam giác vuông</h2>
+<input type="text" id="cạnh a"/>
+<input type="text" id="cạnh b"/>
+<button onclick="dientich()" type="button">kết quả</button>
+<p id="ketQua"></p>
+</body>
+<script>
+    function dientich() {
+   let a = document.getElementById("cạnh a").value;
+   let b =document.getElementById("cạnh b").value;
+   // let b = document.getElementById(" cạnh b").value;
+     result =(parseFloat(a)*parseFloat(b))/2
+        document.getElementById('ketQua').innerHTML=result
+    }
+</script>
+</html>

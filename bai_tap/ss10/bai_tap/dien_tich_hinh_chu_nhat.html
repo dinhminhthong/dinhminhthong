@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dien_tich_hinh_chu_nhat</title>
+</head>
+<body>
+
+<h2>diện tích hình chữ nhật</h2>
+<input type="text" id="cạnh dài"/>
+<br>
+<br>
+<input type="text"id="cạnh rông"/>
+<button onclick="dientich()"type="button">Kết quả</button>
+<br>
+<p id="ketQua"></p>
+
+<script>
+    function dientich() {
+        let a =parseFloat(document.getElementById("cạnh dài").value);
+        let b =parseFloat(document.getElementById("cạnh rông").value);
+        result = a*b;
+        document.getElementById('ketQua').innerHTML=result;
+    }
+</script>
+</body>
+</html>

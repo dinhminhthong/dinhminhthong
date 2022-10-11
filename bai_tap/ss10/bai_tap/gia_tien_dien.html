@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>gia_tien_dien</title>
+</head>
+<body>
+<script>
+    let SoDien = parseFloat(prompt('nhap so dien tieu thu'))
+    if(SoDien<0){
+        document.write('nhập lại')
+    }else if (0< SoDien <=50){
+        soTien = SoDien * 1670
+        document.write('số tiền'+ soTien)
+    }else if (51< SoDien <= 100){
+        soTien = SoDien * 1734
+        document.write('số tiền'+ soTien)
+    } else if (101<SoDien<=200){
+        soTien = SoDien * 2014
+        document.write('số tiền'+soTien)
+    }else if (201< SoDien<=300){
+        soTien = SoDien * 2536
+        document.write('số tiền'+soTien)
+    }else if (301< SoDien<=400){
+        soTien = SoDien * 2834
+        document.write('số tiền '+soTien)
+    }else if (soTien>401){
+        soTien = SoDien * 2927
+        document.write('số tiền'+soTien)
+    }
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chi_so_can_nang</title>
+</head>
+<body>
+<div class="container">
+ <h1>BMI Calculator</h1>
+    <p class="a">Height(in cm</p>
+    <input type="number"id="height">
+    <p class="a">Weight(in kg)</p>
+    <input type="number"id="weight">
+    <button id="btn" onclick=check()>Calculate</button>
+</div>
+<script>
+    var do_height =document.getElementById('height')
+    var do_weight =document.getElementById('weight')
+    var Ketqua = 0;
+    function check() {
+
+        var weight = do_weight.value;
+        var height = do_height.value/100;
+
+        var chuanDoan;
+        var nguyCo;
+
+        BMI =weight/(height*height)
+        BMI = BMI.toFixed(2)
+
+        if (height<=0||weight<=0){
+            alert('nhập sai vui lòng nhập lại')
+        }
+      else{
+          if(BMI<18.5) Ketqua=1
+          if (BMI<24.9 && BMI>18.5) Ketqua=2
+            if(BMI<29.9 && BMI>24.9) Ketqua=3
+            if(BMI<34.9 && BMI>24.9) Ketqua=4
+            if(BMI<39.9 && BMI>34.9) Ketqua=5
+            if(BMI>40) Ketqua=6
+        }
+        switch (Ketqua) {
+            case  1:
+                ChuanDoan = 'hơi gầy'
+                nguyCo = 'nguy cơ thấp'
+                break;
+
+            case 2:
+                ChuanDoan = 'bình thường'
+                nguyCo = ' trung bình'
+                break;
+            case 3:
+                ChuanDoan = 'hơi béo'
+                nguyCo = 'cao'
+                break;
+            case 4:
+                ChuanDoan = 'béo phì cấp độ 1'
+                nguyCo = 'cao'
+                break;
+            case 5:
+                ChuanDoan ='béo phì cấp độ 2'
+                nguyCo ='rất cao'
+                break;
+            case 6:
+                ChuanDoan='nguy cơ cấp độ 3'
+                nguyCo='nguy hiểm'
+                break;
+            case  0:
+                alert(0)
+
+        }
+        if(height>0 && weight>0){
+            alert("Chi số BMI: "+'\n'+"tình trạng cơ thể:"+ ChuanDoan+'\n'+'Nguy cơ phát bệnh'+ nguyCo)
+        }
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>thue_thu_nhap_ca_nhan</title>
+</head>
+<body>
+<script>
+    let thuNhap = parseFloat(prompt('thu nhập cá nhân'))
+    let a = 5000000
+    let b = 10000000
+    let c = 18000000
+    let d = 32000000
+    let e = 52000000
+    let f = 80000000
+    if (thuNhap<=a){
+        document.write('không cần đóng thuế')
+    }else if(a<thuNhap<b){
+        thue = thuNhap *5/100
+        document.write('tiền thuê'+thue)
+    }else if(b<thuNhap<c){
+        thue = thuNhap*10/100
+        document.write('tiền thuế'+thue)
+    }else if(c<thuNhap<d){
+        thue = thuNhap*15/100
+        document.write('tiền thuế'+thue)
+        }else if(d<thuNhap<e){
+        thue =thuNhap*20/100
+        document.write('tiền thuế'+thue)
+    }else if(e<thuNhap<f){
+        thue = thuNhap*25/100
+        document.write('tiền thuế'+thue)
+    }else if(thuNhap>f){
+        thue=thuNhap*30/100
+        document.write('tiền thuế'+thue)
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lai_ngan_hang</title>
+</head>
+<body>
+<script>
+    let r = parseFloat(prompt('lãi xuất'))
+    let p = parseFloat(prompt('số tiền gốc'))
+    let t = parseFloat(prompt('số năm mượn'))
+    let n = parseFloat(prompt('số tiền lãi suất mỗi năm'))
+    let s = n*t;
+    let A = p *(1+r/n)^s
+    document.write('lai xuất kép là '+A)
+</script>
+</body>
+</html>

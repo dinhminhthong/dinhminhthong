@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>phuong_trinh_bac_2</title>
+</head>
+<body>
+<script>
+   let a = parseFloat(prompt('numbera'))
+   let b = parseFloat(prompt('numberb'))
+   let c = parseFloat(prompt('numberc'))
+   let d = b*b - (4*a*c)
+   let S = Math.sqrt(d)
+
+    if (d<0){
+       document.write('phương trình vô nghiệm')
+    } else if(d>0){
+    x1 = (-b + S) / (2*a);
+    x2 = (-b - S) / (2*a);
+    document.writeln('nghiệm thứ nhất là' +x1)
+    document.write('nghiệm thứ hai là' +x2)
+
+   }else if(d == 0){
+        x = -b/2*a
+    document.write('một nghiệm là:'+x)
+    }
+
+</script>
+</body>
+</html>
