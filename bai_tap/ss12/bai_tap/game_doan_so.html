@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>game_doan_so</title>
+</head>
+<body>
+<h2> game đoán số</h2>
+<input type="submit" onclick="doanSo()" value="Bắt đầu">
+<script>
+    function doanSo() {
+        let inputNumber = parseInt(prompt('Nhập vào khoảng số mà bạn muốn đoán'));
+        let randomNumber = parseInt(Math.random()*inputNumber);
+        let nguoiDoan = parseInt(prompt('Nhập vào số bạn muốn đoán'));
+        let count = 0;
+        while (randomNumber === nguoiDoan){
+            alert('Chúc mừng bạn');
+            break;
+        }
+        while (randomNumber !== nguoiDoan){
+                count++;
+                if (count === 4){
+                    alert('Bạn đã hết lượt đoán');
+                    break;
+                }else if (nguoiDoan > randomNumber){
+                    alert("  nhập nhỏ hơn ")
+                }else if ( nguoiDoan< randomNumber){
+                    alert('nhập số lớn hơn')
+                }
+            nhapLai = parseInt(prompt('Nhập lại số bạn muốn đoán'));
+        }
+
+
+
+    }
+</script>
+</body>
+</html>
