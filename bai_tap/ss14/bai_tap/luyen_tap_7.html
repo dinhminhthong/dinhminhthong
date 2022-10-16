@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>luyen_tap_7</title>
+</head>
+<body>
+<script>
+    let count = o;
+    let soNguyen = ['2','32','12','-40','1','23','-31','23','34','23'];
+    let v = parseInt(prompt('nhap vao phan tu V:'))
+    for (let i =0 ; i< soNguyen.length ; i++){
+        if (v == parseInt(soNguyen[i])){
+            soNguyen.splice(i,1);
+            soNguyen.push(0)
+        }
+    }
+    document.write(soNguyen)
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>luyen_tap_6</title>
+</head>
+<body>
+<script>
+    let count = 0;
+    let soNguyen = ['2','32','12','-40','1','23','-31','23','34','23'];
+    let v = parseInt(prompt('nhập vào phần tử v:'));
+    let kiemTra = true;
+    for (let i=0; i<=soNguyen.length; i++){
+        if (v == parseInt(soNguyen[i])){
+            kiemTra = true
+        } else kiemTra = false;
+    }
+    if (kiemTra) document.write('V is in the arry');
+    else document.write('V is not in the arry');
+
+</script>
+</body>
+</html>
