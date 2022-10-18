@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tao_mang</title>
+</head>
+<body>
+<script>
+
+    let a = ['Polaris',' Aldebaran', 'Deneb', 'Vega', 'Altair',' Dubhe ', 'Regulus'];
+    let b = ['Ursa', 'Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa', 'Major' , 'Leo'];
+
+        function star(text) {
+
+        let result
+         for (i=0;i<a.length;i++){
+        if ( a[i]== text){
+            result = b[i];
+            break;
+        } else   {
+           result = 'không tìm thấy ngôi sao'
+        }
+    }
+    return result
+    }
+    alert(star(prompt('tìm ngôi sao')))
+</script>
+</body>
+</html>
