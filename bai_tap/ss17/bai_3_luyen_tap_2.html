@@ -9,6 +9,13 @@
     let a = parseInt(prompt('nhập số nguyên'))
     giayThua(a)
     function giayThua() {
+        if(giayThua==0){
+            document.writeln('1')
+        }else {
+            for(a=1;a<=giayThua;a++){
+                S*=a
+            }document.write(S)
+        }
 
 
     }

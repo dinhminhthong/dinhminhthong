@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiểm tra kí tự</title>
+</head>
+<body>
+<script>
+    let a = prompt('nhập chuỗi');
+    let b = prompt('nhập hàm');
+    let count = 0;
+    kiemTra(a,b);
+    function kiemTra() {
+    for (i=0;i<a.length;i++){
+        if (a[i]==b){
+            count ++
+        }
+    }if (count===0){
+            document.write('-1');
+        }else {
+            document.write(count)
+        }
+
+    }
+</script>
+</body>
+</html>
