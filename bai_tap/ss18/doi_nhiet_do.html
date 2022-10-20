@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>thay doi nhiet do</title>
+</head>
+<body>
+<script>
+class Temperature {
+C;
+constructor(C) {
+this.C=C
+}
+getCelsius(){
+return this.C
+}
+getKelvin(){
+return this.C + 273.15
+}
+getF(){
+return (9/5)*this.C+32
+}
+}let myTemperature= new Temperature(25)
+let doF=myTemperature.getF();
+let K=myTemperature.getKelvin()
+document.write('độ K là : '+K +'<br>')
+document.write('độ F là : '+doF)
+</script>
+</body>
+</html>
