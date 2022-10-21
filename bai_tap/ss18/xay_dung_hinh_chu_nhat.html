@@ -5,9 +5,9 @@
     <title>xây dựng hình chữ nhật</title>
 </head>
 <body>
-
+<canvas width="1000px" height="500px" id="DemoCanvas"/>
 <script>
-    <canvas height="1000px" width="500px" id="DemoCanvas"/>
+
     class hinhChuNhat {
         constructor(Chieudai, Chieurong) {
             this.Chieudai = Chieudai;
@@ -37,11 +37,11 @@
     let Chieurong = nhinhChuNhat.getChieurong()
     let S = nhinhChuNhat.getS()
     let C = nhinhChuNhat.getC()
-    document.write('diện tích hình chữ nhật: '+S +'<br>'+ 'chu vi hình chữ nhật:'+C)
+    alert('diện tích hình chữ nhật: '+S +'<br>'+ 'chu vi hình chữ nhật:'+C)
     let ctx = document.getElementById("DemoCanvas").getContext('2d');
-
+ctx.beginPath();
     ctx.fillStyle='#fa2a2a';
-    ctx.fillRect(10, 10, width, height)
+    ctx.fillRect(10, 10, Chieudai, Chieurong)
 
 
 
