@@ -6,10 +6,9 @@
 </head>
 <body>
 <script>
-
     class Apple {
         constructor(weight) {
-            this.weight = weight;
+            this.weight = weight
         }
 
         isEmpty() {
@@ -23,46 +22,59 @@
         decrease() {
             this.weight--;
         }
-
-        getWeight() {
-            return this.weight;
-        }
     }
 
     class Human {
-        constructor(name, weight, gender) {
-            this.name = name;
-            this.gender = gender;
-            this.weight = weight;
+        constructor(name, Weight, say) {
+            this.name = name
+            this.say = say
+            this.Weight = Weight
         }
 
-        CheckAplle(apple) {
+        getsay() {
+            return this.say
+        }
+
+        checkApple(apple) {
             if (apple.isEmpty()) {
-                document.write("Táo đã hết rồi ! </br>");
+                document.write(' Táo hết' + '<br>')
             } else {
-                document.write("Táo vẫn còn ! </br>");
+                document.write(' Táo còn' + '<br>')
             }
         }
 
         eat(apple) {
             if (apple.isEmpty()) {
-                document.write("Hết táo rồi ! Nhịn </br>");
+                document.write('Nhịn ăn' + '<br>')
             } else {
-                document.write(" ăn táo </br>");
-                this.weight++
-                apple.decrease()
+                document.write(this.name + ' Đang ăn' + '<br>')
+                this.Weight++;
+                apple.decrease();
+
             }
         }
 
     }
 
-    let apple = new Apple(100);
-    let adam = new Human("Adam", 72, "male");
-    let eva = new Human("Eva", 56, "female");
-    adam.CheckAplle(apple);
-    eva.eat(apple);
-    document.write("Cân nặng Eva : " + eva.weight + "</br>");
-    document.write("Táo còn : " + apple.weight + " kg </br>");
+    let apple = new Apple(10);
+    let adam = new Human('Adam', 75, 'ăn nhanh lên')
+    let eva = new Human('Eva', 57, 'ăn nhanh lên')
+    let Say = new Human('name', 57, 'ăn nhanh lên')
+    let a = Say.getsay()
+    for (i = 0; i < 8; i++) {
+        adam.checkApple((apple))
+        eva.eat(apple);
+
+        document.write(a + '<br>')
+        document.write('cân nặng ' + eva.Weight + "<br>")
+        document.write('Quả táo còn ' + apple.weight + '<br>')
+        eva.checkApple((apple))
+        adam.eat(apple);
+        document.write('cân nặng ' + adam.Weight + "<br>")
+        document.write('Quả táo còn ' + apple.weight + "<br>" + '<br>')
+
+
+    }
 
 </script>
 </body>

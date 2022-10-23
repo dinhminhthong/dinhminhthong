@@ -6,43 +6,59 @@
 </head>
 <body>
 <script>
-    class ElectricLamp{
+    class ElectricLamp {
         constructor(status) {
-            this.status = status;
+            this.status = status
         }
-        turnOn(){
+
+        turnOn() {
             this.status = true;
-            return true
         }
-        turnOff(){
+
+        turnOff() {
             this.status = false;
-            return false
         }
-
     }
+
     class SwitchButton {
-        constructor(status, lamp) {
+        constructor(status, electricLamp) {
             this.status = status;
-            this.lamp = lamp;
-
-        }
-        connectToLamp(electricLamp){
             this.electricLamp = electricLamp;
+        }
 
+        light() {
+            if (this.status) {
+                return 'Lighting'
+            } else {
+                return "Not Lighting"
+            }
         }
-        switchOff(){
-            this.lamp.status = false;
-            return false;
+
+        connectToLamp(electricLamp2) {
+            this.electricLamp = electricLamp2
         }
-        switchOn(){
-            this.status.lamp = true;
-            return true;
+
+        switchOn() {
+            this.status = true;
+            this.electricLamp.turnOn()
+        }
+
+        switchOff() {
+            this.status = false;
+            this.electricLamp.turnOff()
         }
     }
+
     let lamp = new ElectricLamp(false);
-    let button = new SwitchButton(false,lamp);
-    document.write(lamp.turnOff()+"</br>");
-    document.write(button.switchOff()+"</br>");
+    let button = new SwitchButton(false, lamp)
+
+    document.write(button.light() + '<br>')
+    document.write('vui lòng bật công tắc bóng đèn' + '<br>')
+    button.switchOn()
+    document.write(button.light() + '<br>')
+    button.switchOff()
+    document.write('vui lòng tắt công tắc bóng đèn' + '<br>')
+    document.write(button.light() + '<br>')
 
 </script>
 </body>
