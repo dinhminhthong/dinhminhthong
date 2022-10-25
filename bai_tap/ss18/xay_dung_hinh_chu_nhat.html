@@ -8,40 +8,40 @@
 <canvas width="1000px" height="500px" id="DemoCanvas"/>
 <script>
 
-    class hinhChuNhat {
-        constructor(Chieudai, Chieurong) {
-            this.Chieudai = Chieudai;
-            this.Chieurong = Chieurong;
+    class Hinhchuchat {
+        constructor(chieuDai, chieuRong) {
+            this.chieuDai = chieuDai;
+            this.chieuRong = chieuRong;
 
         } getChieudai(){
-            return this.Chieudai
+            return this.chieuDai
         } getChieurong(){
-            return this.Chieurong
+            return this.chieuRong
         }
-        setChieudai(Chieudai){
-            this.Chieudai = Chieudai 
+        setChieudai(chieuDai){
+            this.chieuDai = chieuDai
         }
-        setChieurong(Chieurong){
-            this.Chieurong = Chieurong;
+        setChieurong(chieuRong){
+            this.chieuRong = chieuRong;
         }
         getS(){
-           return  this.Chieudai * this.Chieurong;
+           return  this.chieuDai * this.chieuRong;
         }
         getC(){
-            return (this.Chieudai + this.Chieurong)*2;
+            return (this.chieuDai + this.chieuRong)*2;
 
         }
     }
-    let nhinhChuNhat = new hinhChuNhat(250 , 80)
-   let Chieudai = nhinhChuNhat.getChieudai()
-    let Chieurong = nhinhChuNhat.getChieurong()
+    let nhinhChuNhat = new Hinhchuchat(250 , 80)
+   let chieuDai = nhinhChuNhat.getChieudai()
+    let chieuRong= nhinhChuNhat.getChieurong()
     let S = nhinhChuNhat.getS()
     let C = nhinhChuNhat.getC()
-    alert('diện tích hình chữ nhật: '+S +'<br>'+ 'chu vi hình chữ nhật:'+C)
+    alert('diện tích hình chữ nhật: '+S + 'chu vi hình chữ nhật:'+C)
     let ctx = document.getElementById("DemoCanvas").getContext('2d');
 ctx.beginPath();
     ctx.fillStyle='#fa2a2a';
-    ctx.fillRect(10, 10, Chieudai, Chieurong)
+    ctx.fillRect(10, 10, chieuDai, chieuRong)
 
 
 
