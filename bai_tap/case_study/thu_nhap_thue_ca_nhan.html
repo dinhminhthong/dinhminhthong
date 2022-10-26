@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>thu nhập thuế cá nhân</title>
+</head>
+<body>
+<script>
+    let a = 7000000
+    let b=  15000000
+    let money = prompt(' nhập số tiền lương vào');
+    if ( money<=a){
+        document.write(' không cần đóng thuế')
+    } else if (a< money< b){
+        S = money*15/100
+        L = money - S
+        document.write(' tiền phải đóng '+ S+"<br>"+ 'lương ròng'+L)
+    } else {
+        S = money*20/100
+        L = money - S
+        document.write(' tiền phải đóng'+S +"<br>"+ 'lương ròng'+L)
+    }
+</script>
+</body>
+</html>

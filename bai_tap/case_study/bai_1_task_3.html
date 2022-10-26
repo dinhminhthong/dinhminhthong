@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai_1_task_3</title>
+</head>
+<body>
+<script>
+    let b = 0
+    let c = +prompt('nhập độ dài mảng ')
+    let arr = [];
+    let arrB = [];
+    for (let i = 0; i < c; i++) {
+        let a = parseInt(prompt('nhập phần tử số ' + i))
+        arr.push(a)
+        b += arr[i]
+        arrB.push(b)
+    }
+    document.write('mảng a là ' + arr + "<br>")
+    document.write('mảng b là '  + arrB)
+</script>
+</body>
+</html>

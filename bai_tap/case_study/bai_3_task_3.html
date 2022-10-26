@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai_3_task_3</title>
+</head>
+<body>
+<script>
+    let a = [5, 2, 5];
+    let b =  [6, 3, 4];
+    let maxFraction =0
+    for (let i=0; i<a.length; i++){
+        if (a[i] / b[i]>maxFraction){
+            maxFraction = a[i] / b[i]
+            max = a[i]+'/'+ b[i]
+            index = i
+
+        }
+    }document.write(max + 'là phân số lớn nhất'+"<br>" + index + 'là chỉ số')
+
+</script>
+</body>
+</html>

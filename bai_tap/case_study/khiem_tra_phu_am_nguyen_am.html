@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiểm tra phụ âm nguyên âm</title>
+</head>
+<body>
+<script>
+    let alpha = prompt(' nhập kí tự cần kiểm tra');
+    count =0;
+    let a = [ 'o', 'u', 'i', 'a' , 'e'];
+    let b = [ 'O', 'U', 'I', 'A', 'E'];
+    for (let i=0; i<a.length;i++){
+        if(a[i]==alpha || b[i]==alpha){
+            count ++
+        }
+    }
+        if (count>0){
+            document.write(' là nguyên âm')
+        } else {
+            document.write('là phụ âm')
+        }
+</script>
+</body>
+</html>
