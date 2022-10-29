@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai_1_task_5</title>
+</head>
+<body>
+<script>
+ let m = +prompt('vui lòng nhập hàng')
+    let n = +prompt('vui lòng nhập cột')
+    let arrA =[];
+ for (i=0;i<m;i++){
+         arrA[i]=[]
+         for (j=0;j<n;j++){
+             a=+prompt('nhập phần tử'+(j+1));
+             arrA[i].push(a)
+         }
+ }
+ let sum =  0;
+  tinhTong(arrA);
+function tinhTong() {
+for (let i=0; i<arrA.length;i++){
+    for (let j=0;j<arrA[i].length;j++){
+        if (arrA[i][j]% 2==0){
+            sum += arrA[i][j]
+        }
+    }
+}
+}
+document.write('tổng các số chẳn là:'+sum+'<br>')
+</script>
+</body>
+</html>

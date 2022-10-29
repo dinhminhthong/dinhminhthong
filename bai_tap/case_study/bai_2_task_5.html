@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai_2_task_5</title>
+</head>
+<body>
+<script>
+    let arrPrime = [[1, 2, 3, 4],
+        [5, 6, 7, 8]];
+    let arr = [];
+
+    for (let i = 0; i < arrPrime.length; i++) {
+        for (let j = 0; j < arrPrime[i].length; j++) {
+            let count = 0
+            if (arrPrime[i][j] > 1) {
+
+                for (let k = 0; k < arrPrime[i][j]; k++) {
+                    if (arrPrime[i][j] % k == 0) {
+                        count++
+                    }
+                }
+            }
+
+            if (count == 1) {
+                arr.push(arrPrime[i][j])
+            }
+        }
+    }
+    document.writeln('các số nguyên tố có trong mảng là:' + arr+'<br> ')
+    document.writeln("có tất cả là:" + arr.length + 'số')
+</script>
+</body>
+</html>

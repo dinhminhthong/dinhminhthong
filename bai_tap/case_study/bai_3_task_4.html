@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai_3_task_4</title>
+</head>
+<body>
+<script>
+    let s1 = "aabcc";
+    let s2= s1.split('');
+    let s3 = "adcaa";
+    let s4 = s3.split('');
+    let count  =0;
+    commonCharacterCount(s2,s4)
+    function commonCharacterCount() {
+        for ( let i=0; i<s2.length;i++){
+            for ( let j=0;j<s4.length;j++){
+
+                if (s2[i]===s4[j]){
+                    s2.splice(i,1);
+                    s4.splice(j,1);
+                    count++;
+                    console.log(s2,s4)
+                }
+            }
+        }
+        alert(count)
+    }
+</script>
+</body>
+</html>
+
+
