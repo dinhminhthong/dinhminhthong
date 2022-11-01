@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>số lớn nhất trong mảng vừa nhập</title>
+</head>
+<body>
+<script>
+    let max =0
+    let arr =[];
+    for (i=0; i<5;i++){
+
+        let a = parseInt(prompt('nhập phần tử '+i))
+        arr.push(a)
+
+    }document.writeln('mảng số nguyên vừa nhập'+arr)
+    for (i=0;i<arr.length;i++){
+        if (arr[i] > max){
+            max = arr[i]
+        }
+    }
+    document.writeln('vậy giá trị lớn nhất là'+max+'<br>');
+
+
+
+
+</script>
+</body>
+</html>
+
+

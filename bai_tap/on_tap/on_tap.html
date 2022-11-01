@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 2 task 2</title>
+</head>
+<body>
+<script>
+    let alpha = prompt(' nhập kí tự cần kiểm tra')
+    count = 0
+    let a = ['u','i','0','a','e'];
+    let b = ['U','I','O','A',"E"];
+    for (let i=0; i<a.length;i++){
+        if (a[i]==alpha || b[i]==alpha){
+            count ++
+
+        }
+    }
+        if (count>0){
+            document.write('là phụ âm')
+        }else {
+            document.write('là nguyên âm')
+        }
+
+</script>
+</body>
+</html>

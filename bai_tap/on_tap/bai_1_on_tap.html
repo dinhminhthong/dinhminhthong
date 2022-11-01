@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 1 on tap</title>
+</head>
+<body>
+
+<script>
+    let arr = [];
+    let arrnNew = [];
+    let sum = 0;
+    for (let i=0; i<5;i++){
+        let a = parseInt(prompt('nhập phần tử số:'+i))
+        arr.push(a)
+    }
+    document.writeln('mảng số nguyên vừa nhập'+arr)
+    for (let i=0;i<5;i++){
+        if(arr[i]%5===0 &&  i%3===0){
+            arrnNew.push(arr[i])
+        }
+    }
+    document.write(arrnNew)
+    for (let i=0; i<arrnNew.length; i++){
+        sum +=arrnNew[i]
+    }
+    document.writeln('tổng trung bình cộng là'+sum/arrnNew.length)
+
+</script>
+</body>
+</html>

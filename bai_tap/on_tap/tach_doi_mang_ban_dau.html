@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tách đôi mảng ban đầu</title>
+</head>
+<body>
+<script>
+    let a = [];
+    let b= [];
+    let n = prompt('nhap so phan tu cua mang')
+    let arr = [];
+    for (let i=0;i<n;i++){
+        arr[i]=parseInt(prompt('nhap vao phan tu thu i'));
+    }
+    let c =Math.floor(n/2)
+    for (let i=0;i<c;i++){
+        a.push(arr[i])
+    }
+    let d = n - c
+    for (let i=d;i<n;i++){
+        b.push(arr[i])
+
+    }
+   document.write('mảng ban đầu là:'+a+'<br>')
+    document.write('mảng thứ 2 là:'+b)
+
+
+</script>
+</body>
+</html>

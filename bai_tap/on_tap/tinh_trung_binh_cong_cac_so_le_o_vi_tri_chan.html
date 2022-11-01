@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tìm các số lẻ ở vị trí chẵn</title>
+</head>
+<body>
+<script>
+let arr =[];
+let arrNew = [];
+let sum = 0;
+for (let i= 0;i<5;i++){
+    let a = parseInt(prompt('nhập số phần tử'+i))
+    arr.push(a)
+}
+document.write('mảng số nguyên vừa nhập'+arr)
+    for (let i=0;i<arrNew.length;i++) {
+        if (arr[i] % 2 != 0 && i % 2 === 0) {
+            arrNew.push(arr[i])
+        }
+    }
+document.writeln(arrNew)
+    for (let i=0;i<arrNew.length;i++){
+        sum += arrNew[i]
+    }
+document.write('tổng trung bình cộng là:'+sum/arrNew.length)
+</script>
+</body>
+</html>

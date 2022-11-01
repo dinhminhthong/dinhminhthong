@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tách doi mang nguyen ban dau</title>
+</head>
+<body>
+<script>
+    let a= [];
+let b = [];
+    let n = prompt('nhap so phan tu cua mang')
+    let arr = [];
+    for (let i=0;i<n;i++){
+        arr[i]=parseInt(prompt('nhap vao phan tu thu i'));
+
+    }
+    for (i=0;i<n;i++){
+
+        if (arr[i] %2 ==0){
+            a.push(arr[i])
+
+
+
+        }else {
+
+            b.push(arr[i])
+
+
+        }
+    }
+
+    document.write("hàm số chẳn là:"+a+'<br>')
+
+    document.write("hàm số lẻ là:"+b)
+
+</script>
+</body>
+</html>

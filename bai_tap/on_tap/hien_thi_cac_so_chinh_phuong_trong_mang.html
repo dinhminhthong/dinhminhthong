@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hiển thị các số chính phương trong mảng</title>
+</head>
+<body>
+<script>
+ function check(a) {
+     let check =true
+     if (a<=0){
+         check = false
+     } else if(Number.isInteger(Math.sqrt(a))===false) {
+         check = false
+     }
+     return check
+ }
+ function Righteous(a) {
+     let rightteous = []
+     for (let i=0;i<a.length;i++){
+         if (check(a[i])==true) rightteous.push(a[i])
+     }
+     return rightteous
+ }
+ let n = parseInt(prompt('nhập só phần tử của mảng'));
+ let array = [];
+ for (let i=0;i<n;i++){
+     array[i]=parseInt(prompt('nhap vao pha tu thu i'));
+ }
+ let a = Righteous(array);
+ a.sort(function (a,b) {
+     return(a-b)
+
+ })
+ alert(a)
+
+
+    
+
+</script>
+</body>
+</html>

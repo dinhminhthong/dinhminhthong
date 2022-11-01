@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tinh va in ra chang le</title>
+</head>
+<body>
+<script>
+    let i=0;
+    let a = [];
+    let b = [];
+    sum = 0
+    let n = +prompt('nhap so phan tu cua mang')
+    let arr = [];
+   while (i<n){
+       let c = prompt('nhập lại phần tử index là:'+i)
+       if (c<=0){
+           alert('nhập lại phần tử index')
+       } else {
+           arr.push(c)
+           i++
+       }
+   }
+    for (i=0;i<n;i++){
+
+        if (arr[i] %2 ==0){
+            a.push(arr[i])
+
+
+
+        }else {
+
+            b.push(arr[i])
+
+
+        }
+    }
+
+    document.write("hàm số chẳn là:"+a+'<br>')
+
+    document.write("hàm số lẻ là:"+b)
+
+
+
+</script>
+</body>
+</html>

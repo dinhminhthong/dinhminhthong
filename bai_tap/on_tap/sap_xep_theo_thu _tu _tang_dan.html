@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sắp xếp theo thứ tự tăng dần</title>
+</head>
+<body>
+<script>
+
+    let n= parseInt(prompt('nhap so phan tu cua mang'));
+    let newarr=[]
+    for (let i=0;i<n;i++) {
+        newarr[i]=parseInt(prompt('nhap vao phan tu thu i'));
+    }
+
+    newarr.sort(function (a,b) {
+        return (a-b)
+    })
+    document.write(newarr)
+</script>
+</body>
+</html>

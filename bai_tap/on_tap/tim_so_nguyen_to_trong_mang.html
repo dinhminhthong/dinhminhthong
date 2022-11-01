@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tìm số nguyên tố trong mảng</title>
+</head>
+<body>
+<script>
+    function check(a) {
+        let test =true;
+        if (a<=1){
+            test = false
+        } else {
+            for (i=2;i<= Math.sqrt(a);i++){
+                if (a % i ==0){
+                    test = false
+                    break;
+                }
+            }
+        }
+         return test
+    }
+    function Prime(a) {
+        let prime = [];
+        for (let i=0;i<a.length;i++){
+            if(check(a[i])===true) prime.push(a[i])
+        }
+        return prime
+    }
+    let n = parseInt(prompt('nhập số phần tử của mảng'));
+    let array= [];
+    for (let i=0;i<n;i++){
+        array[i]=parseInt(prompt('nhap vao phan tu thu i'));
+    }
+    let a = Prime(array);
+    a.sort(function (a,b) {
+        return(a-b)
+
+    })
+    alert(a)
+
+</script>
+</body>
+</html>
