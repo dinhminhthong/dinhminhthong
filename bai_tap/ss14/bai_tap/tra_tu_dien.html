@@ -7,22 +7,23 @@
 <body>
 
 <h1>Dictionary</h1>
-<input id="input" type="text">
-<button type="button" onclick="translate()">Dịch</button>
+<input id="input" type="text"/>
+<button type="button" onclick="dich()">Dịch</button>
 <p id="result"></p> <br>
 <script>
-    function translate(){
+    function dich(){
         let arr_eng = ["red","blue","green","white","black"];
         let arr_vie = ["đỏ","xanh da trời",'xanh lá chuối',"trắng","đen"];
         let tuNhap = document.getElementById('input').value
 
-        for(let x =0; x <arr_eng.length;x++){
-            if (tuNhap == arr_eng[x]){
-                document.getElementById("result").innerHTML = arr_vie[x]
-             }
-            else
-                document.getElementById("result").innerText = "Không tìm thấy"
+        for(let x =0; x <arr_eng.length;x++) {
+            if (tuNhap == arr_eng[x]) {
+                document.getElementById('result').innerHTML = arr_vie[x]
+            }
         }
+
+        // }else
+        // document.getElementById('result').innerText = "Không tìm thấy"
     }
 
 

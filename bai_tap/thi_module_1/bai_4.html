@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OOP</title>
+    <link rel="stylesheet" href="bai4.css">
+</head>
+<body>
+<h1 align="center">Danh sách điện thoại</h1>
+<div>
+    <button id="add" onclick="create()">Create new phone</button>
+</div>
+<p id="display"></p>
+
+<script>
+    class Phone{
+        constructor(name,producer,price) {
+            this.name = name;
+            this.producer = producer;
+            this.price = price;
+        }
+        getName(){
+            return this.name;
+        }
+        setName(value){
+            this.name = value;
+        }
+        getProducer(){
+            return this.producer;
+        }
+        setProducer (value){
+            this.producer = value;
+        }
+        getPrice(){
+            return this.price
+        }
+        setPrice (value){
+            this.price = value;
+        }
+
+    }
+    let iphone = new Phone("iphone 14","apple",1400);
+    let samsung = new Phone("galaxy s10","samsung",1600);
+    let arr = [iphone,samsung]
+    function display(arr) {
+        let sout = "<table border=\"1px\">\n" +
+                "<tr>\n" +
+                " <th>Name</th>\n"+
+                "<th>Producer</th>\n" +
+                "<th>Price</th>\n" +
+                "</tr>";
+        for (let i=0; i<arr.length;i++){
+            sout += "<tr>"+
+            "<td>"+arr[i].getName()+"</td>"+
+            "<td>"+arr[i].getProducer()+"</td>"+
+            "<td>"+arr[i].getPrice()+"</td>"+
+            "<td>" +
+            "<button id='update' onclick='edit("+i+")'>Update</button>"  +
+            "<button id='delete' onclick='remove("+i+")'>Delete</button>"  +
+                    "</td>" + 
+                    "</tr>"
+        }
+        sout += "</table>"
+        document.getElementById('display').innerHTML = sout;
+    }
+display(arr);
+    function create() {
+        let name = prompt('nhập tên');
+        let producer = prompt('nhập tên nhà sản xuất');
+        let price = +prompt("nhập giá sản phẩm");
+        let phone = new Phone(name, producer, price);
+        arr.push(phone);
+        alert('thêm mới thành công');
+        display(arr)
+    }
+    function edit(value) {
+        let name = prompt('nhập tên')
+        let producer = prompt('nhập tên nhà sản xuất')
+        let price = +prompt('nhập giá sản phẩm')
+        arr[value] = new Phone(name,producer,price)
+        alert('Update thành công');
+        display(arr)
+    }
+    function remove(value) {
+        let chooser = confirm("are you sure??");
+        if (chooser){
+            arr.splice(value,1);
+            alert("delete")
+        }
+display(arr)
+    }
+
+
+</script>
+</body>
+</html>
+
+

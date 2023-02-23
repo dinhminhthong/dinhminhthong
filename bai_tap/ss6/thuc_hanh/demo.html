@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo</title>
+</head>
+<body>
+<p>select a clb football the list</p>
+<select id="myselect" >
+    //cách 1 thì thêm onchange="do_something()"
+    <option value="Mu"> MU</option>
+    <option value="Real"> Real</option>
+    <option value="Chel"> Chel</option>
+    <option value="Mc"> Mc</option>
+</select>
+<!--<&lt;!&ndash;<script>&ndash;&gt;-->
+<!--&lt;!&ndash;    function do_something() {&ndash;&gt;-->
+<!--&lt;!&ndash;        var selectedvalue = document.getElementById("myselect").value;&ndash;&gt;-->
+<!--&lt;!&ndash;        alert(selectedvalue);&ndash;&gt;-->
+<!--&lt;!&ndash;    }&ndash;&gt;-->
+<!--&lt;!&ndash;</script>&ndash;&gt;-->
+<script>
+    var sectionElement = document.getElementById("myselect");
+    sectionElement.addEventListener("change",changeFunction);
+    function changeFunction() {
+        var selectvalue = document.getElementById("myselect").value;
+        alert(selectvalue);
+
+    }
+</script>
+</body>
+</html>

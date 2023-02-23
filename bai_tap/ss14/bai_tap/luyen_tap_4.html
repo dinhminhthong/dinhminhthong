@@ -6,10 +6,16 @@
 </head>
 <body>
 <script>
-    let mang = [2, 6, 5, 3, 8, 9, 4];
-    for (let i = 1; i <= mang.length; i--) {
+  let c=prompt('nhập ');
+  mang=c.toString();
+  let A=''
+    for (i = mang.length -1  ;i>=0; i--) {
+
+        A += mang[i]
     }
-    document.write(mang.reverse());
+    document.write('ket quả ' +A)
+
+    // document.write(mang.reverse());
 </script>
 </body>
 </html>
